@@ -24,7 +24,7 @@ const Section1 = () => {
           </div>
         </div>
         <div className="col col-sm-auto">
-          <img src={Polo} alt="car image" className="img-fluid" />
+          <img src={Polo} alt="car img" className="img-fluid" />
         </div>
       </div>
     </>
