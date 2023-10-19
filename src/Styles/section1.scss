@@ -1,0 +1,43 @@
+.row {
+  align-items: center;
+  padding: 0 1.925rem;
+
+  .h5 {
+    margin: 5px;
+  }
+  h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  span {
+    color: orangered;
+  }
+  button {
+    text-decoration: none;
+    border: none;
+    background: none;
+
+    margin-top: 3rem;
+    padding: 20px;
+  }
+
+  .button-orangered {
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    &:hover {
+      box-shadow: 2px 2px 2px #000000;
+      border-radius: 1rem;
+    }
+  }
+
+  .button-black {
+    padding: 1rem;
+    &:hover {
+      box-shadow: 2px 2px 2px #000000;
+      border-radius: 1rem;
+    }
+  }
+}
