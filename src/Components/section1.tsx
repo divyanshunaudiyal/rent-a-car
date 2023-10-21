@@ -4,7 +4,7 @@ import Polo from "../images/Car/polo.png";
 const Section1 = () => {
   return (
     <>
-      <div className="row ">
+      <div className="row section1-row">
         <div className="col text-center ">
           <div className="h5">Plan your trip now</div>
           <h1 className="">

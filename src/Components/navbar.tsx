@@ -3,28 +3,28 @@ import Logo from "../images/logo/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="container-fluid " id="Home">
+    <div className="navbar-container navbar-container" id="Home">
       <a className="" href="#">
         <img src={Logo} alt="Logo-img " className=" logo" />
       </a>
-      <div className="container-fluid__child1">
-        <a href="#Home" className="">
+      <div className="navbar-container__child1">
+        <a href="#" className="">
           <b>Home</b>
         </a>
-        <a href="#About" className="">
-          <b>About</b>
+        <a href="#bookCar" className="">
+          <b>Book</b>
         </a>
-        <a href="#Model" className="">
+        <a href="#" className="">
           <b>Models</b>
         </a>
-        <a href="#Testimonial" className="">
+        <a href="#" className="">
           <b>Testimonials</b>
         </a>
-        <a href="#Contact" className="">
+        <a href="#" className="">
           <b>Contact</b>
         </a>
       </div>
-      <div className="container-fluid__child2">
+      <div className="navbar-container__child2">
         <a href="" className="btn-green">
           <b> Sign up</b>
         </a>
