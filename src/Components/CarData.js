@@ -18,6 +18,7 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Manual",
       fuel: "Diesel",
+      city: "Dehradun",
     },
   ],
   [
@@ -32,6 +33,7 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Manual",
       fuel: "Gasoline",
+      city: "Dehradun",
     },
   ],
   [
@@ -46,6 +48,7 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Automatic",
       fuel: "Hybrid",
+      city: "Delhi",
     },
   ],
   [
@@ -60,6 +63,7 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Manual",
       fuel: "Diesel",
+      city: "Haridwar",
     },
   ],
   [
@@ -74,11 +78,12 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Manual",
       fuel: "Diesel",
+      city: "Dehradun",
     },
   ],
   [
     {
-      name: "Passat ",
+      name: "Passat",
       price: "25",
       img: Passat,
       model: "Passat CC",
@@ -88,6 +93,7 @@ const CAR_DATA = [
       air: "Yes",
       transmission: "Automatic",
       fuel: "Gasoline",
+      city: "Rishikesh",
     },
   ],
 ];
