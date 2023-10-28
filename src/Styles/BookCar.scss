@@ -31,10 +31,10 @@
 
     h2 {
       text-align: center;
-      font-size: $h3-size;
+      font-size: $h2-size;
       // font-weight: 700;
       margin-bottom: 2.5rem;
-      color: $text-orange;
+      color: rgb(249, 86, 27);
     }
 
     .box-form {
@@ -54,13 +54,17 @@
 
         gap: 0.75rem;
         margin-bottom: 2rem;
-        color: #2a6817;
+        color: #0b1109;
+
+        span {
+          color: orangered;
+        }
 
         &-date {
           display: flex;
           flex-direction: column;
 
-          color: #2a6817;
+          color: #13290d;
           input {
             border: 0.5px solid rgb(203, 201, 201);
             border-radius: 5px;
@@ -122,7 +126,7 @@
   opacity: 0;
 }
 .booking-done {
-  color: #2a6817;
+  color: #5ba644;
   background-color: #c3fabe;
   border-color: #f5c6cb;
   padding: 1rem 1.4rem;

@@ -4,12 +4,10 @@ import Section1 from "./Components/section1.tsx";
 import BookCar from "./Components/BookCar.tsx";
 import Models from "./Components/models.tsx";
 import Testimonials from "./Components/testimonials.tsx";
+import Faq from "./Components/FAQ.tsx";
+import Contact from "./Components/contact.tsx";
 import "./Styles/App.scss";
 
-// import $ from "jquery";
-
-// window.jQuery = $;
-// window.$ = $;
 const App = () => {
   return (
     <>
@@ -18,6 +16,8 @@ const App = () => {
       <BookCar />
       <Models />
       <Testimonials />
+      <Faq />
+      <Contact />
     </>
   );
 };

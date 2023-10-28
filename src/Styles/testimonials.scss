@@ -1,0 +1,51 @@
+@import "./global.scss";
+
+.testimonials-container {
+  font-family: $text-font;
+  margin: 2rem 0.5rem;
+  padding: 5rem 0.5rem;
+
+  &__title {
+    font-family: $text-font;
+    text-align: center;
+
+    h3 {
+      font-size: $h4-size;
+      font-weight: bold;
+    }
+    h1 {
+      font-weight: bold;
+      font-family: $titles-font;
+      color: $text-orange;
+      font-size: $h2-size;
+    }
+    p {
+      margin-left: 25%;
+      margin-right: 25%;
+      font-size: larger;
+      font-weight: 400;
+    }
+  }
+
+  &__client {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+
+    section {
+      background-color: rgb(251, 251, 251);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-left: 5%;
+      margin-right: 5%;
+      box-sizing: border-box;
+      .client-details {
+        img {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+  }
+}

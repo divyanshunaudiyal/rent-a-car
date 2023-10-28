@@ -37,9 +37,11 @@ const BookCar = () => {
 
     if (!carName || !pickupLoc || !dropLoc || !date) {
       showErrorMessage();
+      const doneMsg = document.querySelector(".booking-done");
+      doneMsg.style.display = "none";
     } else {
       removeErrorMessage();
-      setShowModal(!showModal);
+      setShowModal(true);
       const modalDiv = document.querySelector(".booking-modal");
 
       modalDiv?.scroll(0, 0);
@@ -67,6 +69,19 @@ const BookCar = () => {
   function getDate(e) {
     setDate(e.target.value);
   }
+
+  //confirm booking
+  const confirmBooking = (e) => {
+    e.preventDefault();
+    const errorMsg = document.querySelector(".error-message");
+    errorMsg.style.display = "none";
+    const doneMsg = document.querySelector(".booking-done");
+    doneMsg.style.display = "flex";
+    console.log(showModal);
+    setShowModal(!showModal);
+    setCar("");
+    setPickup("");
+  };
 
   //switch image url based on name
   let imgUrl;
@@ -104,7 +119,7 @@ const BookCar = () => {
         <div className="container" id="bookCar">
           <div className="book-content">
             <div className="book-content__box">
-              <h2 className="heading">Book your car</h2>
+              <h2 className="heading">BOOK YOUR CAR</h2>
 
               <p className="error-message">All fields required!</p>
               <p className="booking-done">
@@ -293,7 +308,7 @@ const BookCar = () => {
           <button type="button" onClick={openModal}>
             Close
           </button>
-          <button type="button" onClick={openModal}>
+          <button type="button" onClick={confirmBooking}>
             Save changes
           </button>
         </div>

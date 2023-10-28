@@ -1,33 +1,43 @@
 import React from "react";
+import User1 from "../images/testimonial-images/user1.png";
+import User2 from "../images/testimonial-images/user2.png";
 
 const Testimonials = () => {
   return (
-    <section>
-      <div className="container">
-        <div className="text center">
-          <h3 className="text-center">Revieved by people</h3>
-          <h1 className="text-center">Client testimonials</h1>
-          <p className="lead text-center ">
-            Discover the positive impact we've made on the our clients by
-            reading through their testimonials. Our clients have experienced our
-            service and results, and they're eager to share their positive
-            experiences with you.
-          </p>
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <h6 className="card-subtitle mb-2 text-body-secondary">
-                Card subtitle
-              </h6>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="testimonials-container " id="testimonials">
+      <div className="testimonials-container__title ">
+        <h3>Reviewed by people</h3>
+        <h1>Client testimonials</h1>
+        <p>
+          Discover the positive impact we've made on the our clients by reading
+          through their testimonials. Our clients have experienced our service
+          and results, and they're eager to share their positive experiences
+          with you.
+        </p>
       </div>
-    </section>
+      {/* title div end */}
+      <div className="testimonials-container__client ">
+        <section>
+          <h6>
+            "We rented a car from this website and had an amazing experience!
+            The booking was easy and the rental rates were very affordable. "
+          </h6>
+          <div className="client-details client-1">
+            <img src={User1} alt="client-image" />
+          </div>
+        </section>
+
+        <section>
+          <h6>
+            "We rented a car from this website and had an amazing experience!
+            The booking was easy and the rental rates were very affordable. "
+          </h6>
+          <div className="client-details client-2">
+            <img src={User2} alt="client-image" />
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };
 export default Testimonials;

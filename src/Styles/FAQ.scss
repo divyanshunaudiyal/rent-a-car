@@ -1,0 +1,32 @@
+@import "./global.scss";
+
+.faq-container {
+  //   font-family: $text-font;
+  background: url("../images/faq-img/faq-bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 0rem 5rem 5rem 5rem;
+
+  .faq {
+    width: 75%;
+    margin-left: 25%;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 5rem;
+
+      h3 {
+        color: orangered;
+        font-size: $h2-size;
+      }
+      p {
+        margin: 0 20%;
+      }
+    }
+
+    &__accordion {
+      margin: 5rem;
+      box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+    }
+  }
+}
