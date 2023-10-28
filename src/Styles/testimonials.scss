@@ -6,8 +6,9 @@
   padding: 5rem 0.5rem;
 
   &__title {
+    margin-left: 9%;
     font-family: $text-font;
-    text-align: center;
+    text-align: left;
 
     h3 {
       font-size: $h4-size;
@@ -20,7 +21,7 @@
       font-size: $h2-size;
     }
     p {
-      margin-left: 25%;
+      // margin-left: 25%;
       margin-right: 25%;
       font-size: larger;
       font-weight: 400;
@@ -28,17 +29,29 @@
   }
 
   &__client {
-    text-align: center;
+    text-align: left;
     padding: 2rem;
     display: flex;
     gap: 1rem;
 
+    @media (max-width: 550px) {
+      text-align: right;
+      flex-direction: column;
+
+      padding: 0;
+
+      section {
+        padding: 0;
+        margin: 0;
+      }
+    }
     section {
-      background-color: rgb(251, 251, 251);
       border-radius: 1rem;
       padding: 2rem;
-      margin-left: 5%;
-      margin-right: 5%;
+      @media (min-width: 800px) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
       box-sizing: border-box;
       .client-details {
         img {

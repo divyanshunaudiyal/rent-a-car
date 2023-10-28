@@ -1,0 +1,56 @@
+.contact-container {
+  margin: 2rem 6rem;
+  h1 {
+    color: orangered;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  &__details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+    @media (min-width: 950px) {
+      flex-direction: row;
+      gap: 9.5rem;
+    }
+    // align-items: center;
+  }
+  h4 {
+    font-weight: bold;
+  }
+
+  .subscription {
+    input {
+      border: 1.5px solid rgb(6, 2, 1);
+      background-color: rgb(251, 251, 251);
+      border-radius: 7px;
+      padding: 0.5rem;
+      display: block;
+      margin-bottom: 5px;
+
+      &:hover {
+        background-color: white;
+        &::placeholder {
+          color: orangered;
+        }
+      }
+    }
+    button {
+      padding: 0.5rem;
+      width: 12rem;
+      border: none;
+      border-radius: 7px;
+      color: white;
+      background-color: orangered;
+      transition: 0.5s all;
+      &:hover {
+        color: orangered;
+        background-color: white;
+        box-shadow: 0 10px 15px rgb(255 83 48 / 55%);
+      }
+    }
+  }
+}

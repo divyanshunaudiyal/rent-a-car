@@ -2,8 +2,6 @@
 
 .book-section {
   position: relative;
-
-  // background: linear-gradient(to bottom, $bg-gray 20%, $bg-white 80%);
 }
 
 .book-content {
@@ -13,13 +11,15 @@
   &__box {
     background-color: $bg-white;
     width: 100%;
-    padding: 4rem 4.5rem 5rem 5.5rem;
+    padding: 2rem 4.5rem 5rem 5.5rem;
     box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
     height: auto;
     position: relative;
     z-index: 4;
     color: white;
-    border-radius: 5px;
+
+    border-radius: 1rem;
+    border-top-left-radius: 0.25rem;
     // background-image: url("/src/images/Book-background/book-bg.png");
     background: url("../images/Book-background/book-bg.png");
     background-position: center center;
@@ -29,20 +29,19 @@
     flex-direction: column;
     color: $text-black;
 
-    h2 {
+    h4 {
       text-align: center;
-      font-size: $h2-size;
-      // font-weight: 700;
-      margin-bottom: 2.5rem;
+      font-weight: bolder;
+      margin-bottom: 2rem;
       color: rgb(249, 86, 27);
     }
 
     .box-form {
       text-align: center;
       padding: 2rem;
-      border: 0.5px solid rgb(178, 175, 175);
+      border: 1.75px solid rgb(178, 175, 175);
       border-radius: 1rem;
-      border-top-left-radius: 0.25rem;
+      border-top-left-radius: 3.25rem;
 
       &__container {
         @media (max-width: 630px) {
@@ -55,6 +54,11 @@
         gap: 0.75rem;
         margin-bottom: 2rem;
         color: #0b1109;
+
+        label {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
 
         span {
           color: orangered;

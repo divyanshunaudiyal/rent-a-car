@@ -1,7 +1,18 @@
 @import "./global.scss";
 
 .faq-container {
-  //   font-family: $text-font;
+  @media (max-width: 600px) {
+    padding: 0;
+    .faq {
+      h3 {
+        width: 50%;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  font-family: $text-font;
   background: url("../images/faq-img/faq-bg.png");
   background-repeat: no-repeat;
   background-position: left;
@@ -12,15 +23,16 @@
     margin-left: 25%;
 
     &__title {
-      text-align: center;
       margin-bottom: 5rem;
 
       h3 {
         color: orangered;
         font-size: $h2-size;
+        font-weight: bold;
       }
       p {
-        margin: 0 20%;
+        font-weight: bold;
+        margin: 0 10% 0 20%;
       }
     }
 

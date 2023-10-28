@@ -119,7 +119,7 @@ const BookCar = () => {
         <div className="container" id="bookCar">
           <div className="book-content">
             <div className="book-content__box">
-              <h2 className="heading">BOOK YOUR CAR</h2>
+              <h4 className="heading">Book your car</h4>
 
               <p className="error-message">All fields required!</p>
               <p className="booking-done">
