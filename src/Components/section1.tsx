@@ -7,7 +7,7 @@ const Section1 = () => {
       <div className="row section1-row">
         <div className="col text-center ">
           <div className="h5">Plan your trip now</div>
-          <h1 className="">
+          <h1>
             Save <span>big</span> with our car rental
           </h1>
           <p>

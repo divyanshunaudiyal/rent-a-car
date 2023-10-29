@@ -12,7 +12,7 @@
     background-color: $bg-white;
     width: 100%;
     padding: 2rem 4.5rem 5rem 5.5rem;
-    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 10px 20px 0 rgba(235, 15, 15, 0.1);
     height: auto;
     position: relative;
     z-index: 4;
@@ -30,16 +30,19 @@
     color: $text-black;
 
     h4 {
+      text-shadow: $text-shadow;
       text-align: center;
       font-weight: bolder;
+      font-size: $h2-size;
       margin-bottom: 2rem;
       color: rgb(249, 86, 27);
     }
 
     .box-form {
+      background: rgb(252, 251, 251);
       text-align: center;
       padding: 2rem;
-      border: 1.75px solid rgb(178, 175, 175);
+      // border: 1.75px solid rgb(178, 175, 175);
       border-radius: 1rem;
       border-top-left-radius: 3.25rem;
 
@@ -78,12 +81,12 @@
     }
 
     button {
+      padding: 1rem 2rem;
+      font-weight: bold;
       height: fit-content;
       align-self: self-end;
       border: none;
       font-family: $text-font;
-
-      font-weight: 500;
       color: white;
       background-color: $text-orange;
       box-shadow: 0 10px 15px rgb(255 83 48 / 35%);
@@ -178,7 +181,6 @@
         height: 1rem;
       }
       div {
-        // width: min-content;
         display: flex;
         justify-content: space-around;
       }
@@ -186,6 +188,10 @@
       display: grid;
       grid-template-columns: auto auto;
       gap: 1rem;
+      @media (max-width: 650px) {
+        display: flex;
+        flex-direction: column;
+      }
 
       .checkbox {
         margin: 2rem 1rem;
@@ -262,7 +268,7 @@
 
     @media (max-width: 650px) {
       grid-template-columns: 1fr;
-      text-align: center;
+      text-align: left;
     }
 
     &-date,
@@ -300,8 +306,6 @@
           margin-bottom: 0.2rem;
         }
       }
-
-      // complete till here
     }
   }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CAR_DATA from "./CarData.js";
 import Golf6 from "../images/Cars-big/golf6.jpg";
 import Audi from "../images/Cars-big/audi.jpg";

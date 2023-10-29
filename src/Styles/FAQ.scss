@@ -26,6 +26,7 @@
       margin-bottom: 5rem;
 
       h3 {
+        text-shadow: $text-shadow;
         color: orangered;
         font-size: $h2-size;
         font-weight: bold;
@@ -38,7 +39,7 @@
 
     &__accordion {
       margin: 5rem;
-      box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+      box-shadow: 5px 15px 20px 0 rgba(247, 87, 33, 0.1);
     }
   }
 }

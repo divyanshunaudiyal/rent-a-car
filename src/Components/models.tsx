@@ -1,58 +1,109 @@
-import React from "react";
-import CAR_DATA from "./CarData";
+import React, { useState } from "react";
+import CAR_DATA from "./CarData.js";
+import Golf6 from "../images/Cars-big/golf6.jpg";
+import Audi from "../images/Cars-big/audi.jpg";
+import Benz from "../images/Cars-big/benz.jpg";
+import Bmw from "../images/Cars-big/bmw.jpg";
+import Passat from "../images/Cars-big/passatcc.jpg";
+import Toyota from "../images/Cars-big/toyota.jpg";
 
 const Models = () => {
-  return (
-    <div id="model">
-      <div className="container text-center parent" id="showModel">
-        <h1>Models</h1>
+  const [model, setModel] = useState("");
 
-        <div className="my-5 button-container d-flex flex-column gap-2 w-25">
+  const showModel = (e) => {
+    setModel(e.target.value);
+  };
+
+  //find car based on model
+  const [car] = CAR_DATA.find((elem) => {
+    const [car] = elem;
+    if (model == "") {
+      return car.name == "Passat";
+    } else return car.name == model;
+  });
+
+  let imgUrl: string;
+  switch (model) {
+    case "Golf 6":
+      imgUrl = Golf6;
+      break;
+    case "Audi":
+      imgUrl = Audi;
+      break;
+    case "Toyota Supra":
+      imgUrl = Toyota;
+      break;
+    case "BMW":
+      imgUrl = Bmw;
+      break;
+    case "Mercedes-Benz":
+      imgUrl = Benz;
+      break;
+    case "Passat":
+      imgUrl = Passat;
+      break;
+    default:
+      imgUrl = Passat;
+  }
+
+  return (
+    <div className="model-container" id="model">
+      <div className="model-container__title">
+        <h1>Models</h1>
+        <h3>Get details of our cars</h3>
+      </div>
+      <div className="model-container__car ">
+        <div className="car-list ">
           {CAR_DATA.map((cars, i) => {
             const [car] = cars;
             return (
-              <button
-                className="btn btn-outline-danger"
-                key={i + 1}
-                // onClick={displayModel}
-              >
+              <button key={i + 1} value={car.name} onClick={showModel}>
                 {car.name}
               </button>
             );
           })}
         </div>
+
+        <div className="car-image">
+          <img src={imgUrl} alt="car-image " />
+        </div>
+        <div className="car-specs">
+          <table>
+            <tbody>
+              <tr>
+                <td>name</td>
+                <td>{car.name}</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>{car.price}</td>
+              </tr>
+              <tr>
+                <td>Year</td>
+                <td>{car.year}</td>
+              </tr>
+              <tr>
+                <td>Doors</td>
+                <td>{car.doors}</td>
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>{car.air}</td>
+              </tr>
+              <tr>
+                <td>Transmissin</td>
+                <td>{car.transmission}</td>
+              </tr>
+              <tr>
+                <td>Fuel</td>
+                <td>{car.fuel}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
-
-  //   function
-  //   function displayModel(e) {
-  //     const parentEl = e.target.closest(".parent");
-  //     console.log(parentEl);
-  //     const div = document.createElement("div");
-  //     div.innerHTML = `
-  //     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
-  //       <div class="modal-dialog">
-  //         <div class="modal-content">
-  //           <div class="modal-header">
-  //             <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-  //             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-  //           </div>
-  //           <div class="modal-body">
-  //             sxxaxsaxsasxasx
-  //           </div>
-  //           <div class="modal-footer">
-  //             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-  //             <button type="button" class="btn btn-primary">Understood</button>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //     `;
-
-  //     parentEl.insertAdjacentHTML("beforeend", div);
-  //     console.log(parentEl.innerHTML);
-  //   }
 };
 
 export default Models;

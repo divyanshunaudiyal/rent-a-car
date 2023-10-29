@@ -1,0 +1,98 @@
+@import "./global.scss";
+
+.model-container {
+  margin: 2rem 0.5rem;
+  padding: 0 2rem;
+
+  &__title {
+    margin-right: 9%;
+    text-align: right;
+    margin-bottom: 3%;
+    h1 {
+      font-size: $h2-size;
+      color: $text-orange;
+      font-family: $titles-font;
+      font-weight: bold;
+      text-shadow: $text-shadow;
+    }
+    h3 {
+      font-weight: bold;
+      font-family: $titles-font;
+    }
+  }
+
+  &__car {
+    align-items: center;
+    margin: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    justify-items: center;
+
+    .car-list {
+      display: flex;
+      @media (min-width: 900px) {
+        flex-direction: column;
+      }
+
+      gap: 1rem;
+
+      button {
+        font-weight: bold;
+        color: $text-orange;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid $text-orange;
+        border-radius: 0.1rem;
+        background-color: white;
+        transition: 0.5s all;
+        &:hover {
+          color: white;
+
+          background-color: $text-orange;
+        }
+      }
+    }
+
+    .car-image {
+      transform: translateX(10%);
+      width: 50rem;
+      img {
+        width: 70%;
+        @media (max-width: 700px) {
+          width: 50%;
+          transform: translateX(25%);
+        }
+        @media (min-width: 700px) and (max-width: 900px) {
+          transform: translateX(10%);
+        }
+      }
+    }
+
+    .car-specs {
+      width: 20rem;
+
+      table {
+        font-weight: bold;
+
+        color: $text-orange;
+        tr {
+          // padding: 0.9rem 0.5rem;
+          border-bottom: 2px solid #000; /* Add a border to the bottom of each row */
+        }
+
+        td {
+          box-sizing: border-box;
+          text-align: center;
+          width: 20rem;
+          height: 2rem;
+          padding: 0.9rem 1rem;
+          border: 2px solid #000; /* Add borders to each table cell (td or th) */
+        }
+      }
+    }
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

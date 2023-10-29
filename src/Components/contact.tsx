@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="contact-container ">
-      <h1 className="">CONTACT US</h1>
+    <div className="contact-container " id="contact">
+      <h1 className="">Contact us</h1>
       <div className="contact-container__details ">
         <div className="car-rental">
           <h4>CAR Rental</h4>

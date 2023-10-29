@@ -1,3 +1,5 @@
+@use "./global.scss" as *;
+
 .section1-row:before {
   content: "";
   background: url("../images/buildings-background/buildings.png") no-repeat;
@@ -15,16 +17,25 @@
 }
 
 .section1-row {
+  font-family: $text-font;
   align-items: center;
   padding: 0 1.925rem;
   margin-bottom: 10rem;
 
   .h5 {
+    font-weight: bold;
     margin: 5px;
   }
   h1 {
+    @media (max-width: 800px) {
+      font-size: $h4-size;
+    }
+    text-shadow: $text-shadow;
+    font-family: $titles-font;
+    font-weight: bold;
+    font-size: $h2-size;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: rem;
   }
   span {
     color: orangered;

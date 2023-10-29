@@ -23,7 +23,7 @@ const CAR_DATA = [
   ],
   [
     {
-      name: "Audi ",
+      name: "Audi",
       price: "45",
       img: Audi,
       model: "Audi",
@@ -53,7 +53,7 @@ const CAR_DATA = [
   ],
   [
     {
-      name: "BMW ",
+      name: "BMW",
       price: "35",
       img: BMW,
       model: "320",
