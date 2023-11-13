@@ -2,6 +2,20 @@ import React from "react";
 import Polo from "../images/Car/polo.png";
 
 const Section1 = () => {
+  const scrollToBookingSection = () => {
+    const bookingSection = document.getElementById("booking-section");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFaqSection = () => {
+    const faqSection = document.getElementById("faq");
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="row section1-row">
@@ -15,10 +29,13 @@ const Section1 = () => {
             flexible pick-up options and much more.
           </p>
           <div className="d-flex gap-2 text-center justify-content-center align-items-center">
-            <button className="button-orangered">
+            <button
+              className="button-orangered"
+              onClick={scrollToBookingSection}
+            >
               <b>Book Ride</b>
             </button>
-            <button className="button-black">
+            <button className="button-black" onClick={scrollToFaqSection}>
               <b>Learn More</b>
             </button>
           </div>

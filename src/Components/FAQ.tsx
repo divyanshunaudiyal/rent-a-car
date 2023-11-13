@@ -2,7 +2,7 @@ import React from "react";
 
 const Faq = () => {
   return (
-    <div className="faq-container">
+    <div className="faq-container" id="faq">
       <div className="faq ">
         <div className="faq__title text-center">
           <h3>Frequently asked questions</h3>

@@ -7,7 +7,7 @@ import Bmw from "../images/Cars-big/bmw.jpg";
 import Passat from "../images/Cars-big/passatcc.jpg";
 import Toyota from "../images/Cars-big/toyota.jpg";
 
-const Models = () => {
+const PickCar = () => {
   const [model, setModel] = useState("");
 
   const showModel = (e) => {
@@ -49,7 +49,7 @@ const Models = () => {
   return (
     <div className="model-container" id="model">
       <div className="model-container__title">
-        <h1>Models</h1>
+        <h1>PickCar</h1>
         <h3>Get details of our cars</h3>
       </div>
       <div className="model-container__car ">
@@ -106,4 +106,4 @@ const Models = () => {
   );
 };
 
-export default Models;
+export default PickCar;

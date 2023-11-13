@@ -1,25 +1,25 @@
-import React from "react";
-import Navbar from "./Components/navbar.tsx";
-import Section1 from "./Components/section1.tsx";
-import BookCar from "./Components/BookCar.jsx";
-import Models from "./Components/models.tsx";
-import Testimonials from "./Components/testimonials.tsx";
-import Faq from "./Components/FAQ.tsx";
-import Contact from "./Components/contact.tsx";
-import "./Styles/App.scss";
+import About from "./pages/about";
+import Home from "./pages/Home";
+import Navbar from "./Components/navbar";
+import Info from "./pages/Info";
+import { Route, Routes } from "react-router-dom";
 
-const App = () => {
+import Testimonials from "./Components/testimonials";
+import Contact from "./Components/contact";
+import "./Styles/App.scss";
+function App() {
   return (
     <>
       <Navbar />
-      <Section1 />
-      <BookCar />
-      <Models />
-      <Testimonials />
-      <Faq />
-      <Contact />
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="info" element={<Info />} />
+        <Route path="testimonials" element={<Testimonials />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
     </>
   );
-};
+}
 
 export default App;

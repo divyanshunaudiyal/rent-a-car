@@ -77,7 +77,6 @@ const BookCar = () => {
     errorMsg.style.display = "none";
     const doneMsg = document.querySelector(".booking-done");
     doneMsg.style.display = "flex";
-    console.log(showModal);
     setShowModal(!showModal);
     setCar("");
     setPickup("");
@@ -133,66 +132,66 @@ const BookCar = () => {
                   <div className="">
                     <label>
                       Select Car <span>*</span>
+                      <select className="form-control " id="" onChange={getCar}>
+                        <option key={0}></option>
+                        {CAR_DATA.map((cars, i) => {
+                          const [car] = cars;
+                          return <option key={i + 1}>{car.name}</option>;
+                        })}
+                      </select>
                     </label>
-                    <select className="form-control " id="" onChange={getCar}>
-                      <option key={0}></option>
-                      {CAR_DATA.map((cars, i) => {
-                        const [car] = cars;
-                        return <option key={i + 1}>{car.name}</option>;
-                      })}
-                    </select>
                   </div>
 
                   {/* Pickup location */}
                   <div>
                     <label>
                       Pickup location <span>*</span>
+                      <select
+                        name=""
+                        id=""
+                        className="form-control "
+                        onChange={getPickupLocation}
+                      >
+                        <option key={0}></option>
+                        {CAR_DATA.map((cars, i) => {
+                          const [car] = cars;
+                          return (
+                            <option key={i + 1} placeholder="choose">
+                              {car.city}
+                            </option>
+                          );
+                        })}
+                      </select>
                     </label>
-                    <select
-                      name=""
-                      id=""
-                      className="form-control "
-                      onChange={getPickupLocation}
-                    >
-                      <option key={0}></option>
-                      {CAR_DATA.map((cars, i) => {
-                        const [car] = cars;
-                        return (
-                          <option key={i + 1} placeholder="choose">
-                            {car.city}
-                          </option>
-                        );
-                      })}
-                    </select>
                   </div>
 
                   {/* Drop Location */}
                   <div>
                     <label>
                       Drop location <span>*</span>
+                      <select
+                        name=""
+                        id=""
+                        className="form-control "
+                        onChange={getDropLocation}
+                      >
+                        <option key={0}></option>
+                        {CAR_DATA.map((cars, i) => {
+                          const [car] = cars;
+                          return (
+                            <option key={i + 1} placeholder="choose">
+                              {car.city}
+                            </option>
+                          );
+                        })}
+                      </select>
                     </label>
-                    <select
-                      name=""
-                      id=""
-                      className="form-control "
-                      onChange={getDropLocation}
-                    >
-                      <option key={0}></option>
-                      {CAR_DATA.map((cars, i) => {
-                        const [car] = cars;
-                        return (
-                          <option key={i + 1} placeholder="choose">
-                            {car.city}
-                          </option>
-                        );
-                      })}
-                    </select>
                   </div>
                   <div className="form-control box-form__container-date">
                     <label>
                       Choose date <span>*</span>
+                      <input type="date" onChange={getDate} />
                     </label>
-                    <input type="date" onChange={getDate} />
                   </div>
                 </div>
                 {/* Button trigger modal  */}
@@ -305,9 +304,6 @@ const BookCar = () => {
         </div>
 
         <div className="booking-modal__footer">
-          <button type="button" onClick={openModal}>
-            Close
-          </button>
           <button type="button" onClick={confirmBooking}>
             Save changes
           </button>

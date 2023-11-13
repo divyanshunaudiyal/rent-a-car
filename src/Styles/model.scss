@@ -29,9 +29,9 @@
     justify-items: center;
 
     .car-list {
-      display: flex;
-      @media (min-width: 900px) {
-        flex-direction: column;
+      display: grid;
+      @media (min-width: 1350px) {
+        grid-template-columns: auto;
       }
 
       gap: 1rem;
