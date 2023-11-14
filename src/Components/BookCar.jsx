@@ -131,7 +131,7 @@ const BookCar = () => {
                   {/* car name */}
                   <div className="">
                     <label>
-                      Select Car <span>*</span>
+                      Select Car
                       <select className="form-control " id="" onChange={getCar}>
                         <option key={0}></option>
                         {CAR_DATA.map((cars, i) => {

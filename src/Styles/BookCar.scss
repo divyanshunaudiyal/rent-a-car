@@ -1,6 +1,7 @@
 @use "../Styles/global.scss" as *;
 
 .book-section {
+  font-family: $text-font;
   position: relative;
 }
 

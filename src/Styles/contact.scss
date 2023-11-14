@@ -8,7 +8,6 @@
     font-size: $h2-size;
     text-shadow: $text-shadow;
     text-align: left;
-    padding: 0 1rem;
     padding: 2rem 0;
   }
   &__details {
@@ -21,7 +20,6 @@
       flex-direction: row;
       gap: 9.5rem;
     }
-    // align-items: center;
   }
   h4 {
     font-weight: bold;
